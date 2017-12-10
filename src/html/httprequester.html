@@ -3,12 +3,25 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link ref="stylesheet" href="httprequester.css" />
+        <link ref="stylesheet" href="/src/css/httprequester.css" />
     </head>
 
     <body>
-        <section class="httprequester">
-            <p>HttpRequester ported to Firefox quantum</p>
-        </section>
+        <div class="httprequester">
+            <section class="httprequester__request">
+                <h1>Request</h1>
+                <label for="request__url">URL:</label>
+                <input type="text" id="request__url" class="request__input" />
+                <input type="submit" class="request__submit" value="Submit" />
+            </section>
+            <section class="httprequester__response--hidden">
+                <h1>Response</h1>
+                <div class="response__summary">
+                    <p class="response__origin"></p>
+                    <label for"response__status">Status</label>
+                    <P id="response__status" class="response__code"></P>
+                </div>
+            </section>
+        </div>
     </body>
 </html>

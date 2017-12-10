@@ -1,1 +1,8 @@
 /* This file contains all the general element styling */
+.httprequester__response {
+    display: block;
+    border: 1px solid;
+}
+.httprequester__response--hidden {
+    display: none;
+}
