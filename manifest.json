@@ -1,0 +1,26 @@
+{
+    
+    "description": "The original HttpRequester ported to Firefox Quantum by Darryl Alexander. Original can be found at https://addons.mozilla.org/en-US/firefox/addon/httprequester/",
+    "manifest_version": 2,
+    "name": "HttpRequester",
+    "version": "3.0",
+    "homepage_url": "https://github.com/darrylAlexander/HttpRequester",
+    "icons": {
+      "48": "icons/httprequester-48.png"
+    },
+
+    "background": {
+        "scripts": ["src/js/init.js"]
+    },
+
+    "permissions": [
+        "activeTab"
+    ],
+    
+    "browser_action": {
+      "default_icon": "icons/httprequester-32.png",
+      "default_title": "HttpRequester"
+    }
+
+}
+    
