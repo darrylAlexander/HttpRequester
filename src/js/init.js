@@ -1,9 +1,9 @@
 function openPanel() {
     var createData = {
         type: "detached_panel",
-        url: "/src/html/httprequester.html",
-        width: 320,
-        height: 480
+        url: "/src/httprequester.html",
+        width: 900,
+        height: 600
     };
     var creating = browser.windows.create(createData);
 }
