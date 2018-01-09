@@ -10,12 +10,14 @@
     <body>
         <div class="httprequester">
             <section class="httprequester__request">
-                <h1>Request</h1>
-                <label for="request__url">URL:</label>
-                <input type="text" id="request__url" class="request__input" />
-                <input type="submit" class="request__submit" value="Submit" />
+                <form id="httprequester_getRequest" action="http://localhost/register.php" method="get">
+                    <h1>Request</h1>
+                    <label for="request__url">URL:</label>
+                    <input type="text" id="request__url" class="request__input" name="url"/>
+                    <input type="submit" class="request__submit" value="Submit" />
+                </form>
             </section>
-            <section class="httprequester__response--hidden">
+            <section class="httprequester__response">
                 <h1>Response</h1>
                 <div class="response__summary">
                     <p class="response__origin"></p>
@@ -24,25 +26,8 @@
                 </div>
             </section>
         </div>
-
-        <h1>Sending forms with pure AJAX</h1>
-
-        <h2>Using the GET method</h2>
-        
-        <form id="getRequest" action="http://localhost/register.php" method="get">
-          <fieldset>
-            <legend>Registration example</legend>
-            <p>
-              First name: <input type="text" name="firstname" /><br />
-              Last name: <input type="text" name="lastname" />
-            </p>
-            <p>
-              <input type="submit" value="Submit" />
-            </p>
-          </fieldset>
-        </form>
         
         <script src="ajaxsubmit.js"></script>
-        <script src="popupInit.js"></script>
+        <script src="httprequester.js"></script>
     </body>
 </html>

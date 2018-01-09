@@ -16,7 +16,7 @@
     ],
 
     "background": {
-        "scripts": ["src/js/init.js"]
+        "scripts": ["src/js/background.js"]
     },
     
     "browser_action": {
