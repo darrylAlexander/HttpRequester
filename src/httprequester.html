@@ -9,14 +9,57 @@
 
     <body>
         <div class="httprequester">
-            <section class="httprequester__request">
-                <form id="httprequester_getRequest" action="http://localhost/register.php" method="get">
+            <section class="httprequester__request">                
+                <div class="request__heading">
                     <h1>Request</h1>
-                    <label for="request__url">URL:</label>
-                    <input type="text" id="request__url" class="request__input" name="url"/>
-                    <input type="submit" class="request__submit" value="Submit" />
+                </div>
+                <div class="request__basic">
+                    <label for="basic__url">URL:</label>
+                    <input type="url" id="basic__url" class="basic__input" name="url"/>
+                    <select class="basic__select">
+                        <option>POST</option>
+                    </select>
+                    <input type="submit" id="basic__submit--submit" class="basic__submit" value="Submit" />
+                    <input type="submit" id="basic__submit--get" class="basic__submit" value="Get" />
+                    <input type="submit" id="basic__submit--post" class="basic__submit" value="Post" />
+                    <input type="submit" id="basic__submit--put" class="basic__submit" value="Put" />
+                    <input type="submit" id="basic__submit--new" class="basic__submit" value="New Request" />
+                    <input type="submit" id="basic__submit--paste" class="basic__submit" value="Paste Request" />
+                </div>
+                <div class="request__advanced">
+                    <div class="advanced__content">
+                        <h1>Content to Send</h1>
+                        <label for="content__selection">Content Type:</label>
+                        <select id="content__selection" class="content__select">
+                            <option>application/json</option>
+                        </select>
+                        <label for="content__encoding">Content Options:</label>
+                        <button id="content__encoding" class="content_button">Base64</button>
+                        <button id="content__parameterbody" class="content_button">Parameter Body</button>
+                        <input type="radio" id="content__body" name="bodytype" class="content__radio" value="0"><label>Content</label>
+                        <input type="radio" id="content__radiofile" name="bodytype" class="content__radio" value="1"><label>File</label>
+                        <input type="file" id="content__textfile" class="content__upload"/>
+                        <textarea id="content__body" class="content__textarea"></textarea>
+                    </div>
+                    <div class="advanced__headers">
+                        <label for="headers__name">Name:</label>
+                        <input type="text" id="headers__name" class="headers__input" />
+                        <label for="headers__value">Value:</label>
+                        <input type="text" id="headers__value" class="headers__input" />
+                        <button id="headers__addchange" class="headers__button">Add Change</button>
+                        <table id="headers__set" class="headers__table">
+                            <tr>
+                                <th>Name</th>
+                                <th>Value</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="advanced__Parameters"></div>
+                </div>
+                <form id="httprequester_getRequest" action="http://localhost/register.php" method="get">
                 </form>
             </section>
+
             <section class="httprequester__response">
                 <h1>Response</h1>
                 <div class="response__summary">
@@ -24,6 +67,10 @@
                     <label for"response__status">Status</label>
                     <P id="response__status" class="response__code"></P>
                 </div>
+            </section>
+
+            <section>
+                <h1>History</h1>
             </section>
         </div>
         
