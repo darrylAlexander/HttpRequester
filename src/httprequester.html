@@ -36,8 +36,10 @@
                         <label for="content__encoding">Content Options:</label>
                         <button id="content__encoding" class="content_button">Base64</button>
                         <button id="content__parameterbody" class="content_button">Parameter Body</button>
-                        <input type="radio" id="content__body" name="bodytype" class="content__radio" value="0"><label>Content</label>
-                        <input type="radio" id="content__radiofile" name="bodytype" class="content__radio" value="1"><label>File</label>
+                        <input type="radio" id="content__body" name="bodytype" class="content__radio" value="0">
+                        <label>Content</label>
+                        <input type="radio" id="content__radiofile" name="bodytype" class="content__radio" value="1">
+                        <label>File</label>
                         <input type="file" id="content__textfile" class="content__upload"/>
                         <textarea id="content__body" class="content__textarea"></textarea>
                     </div>
@@ -54,23 +56,38 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="advanced__Parameters"></div>
+                    <div class="advanced__parameters">
+                        <label for="parameters__parameterkey">Key:</label>
+                        <input type="text" id="parameters__parameterkey" class="parameters__input" />
+                        <label for="parameters__parametervalue">Value:</label>
+                        <input type="text" id="parameters__parametervalue" class="parameters__input" />
+                        <button id="parameters__add" class="parameters__button">Add</button>
+                    </div>
                 </div>
                 <form id="httprequester_getRequest" action="http://localhost/register.php" method="get">
                 </form>
             </section>
 
             <section class="httprequester__response">
-                <h1>Response</h1>
+                <div class="response__heading">
+                    <h1>Response</h1>
+                </div>
                 <div class="response__summary">
-                    <p class="response__origin"></p>
-                    <label for"response__status">Status</label>
-                    <P id="response__status" class="response__code"></P>
+                    <p id="summary__origin" class="summary__paragraph"></p>
+                    <label for"summary__status">Status:</label>
+                    <p id="summary__status" class="summary__paragraph"></p>
+                    <a href="#" class="summary__link">View raw transaction</a>
+                    <textarea id="summary__body" class="summary__textarea"></textarea>
+                    <label for="summary__">Headers:</label>
                 </div>
             </section>
 
-            <section>
-                <h1>History</h1>
+            <section class="httprequester__history">
+                <div class="history__heading">
+                    <h1>History</h1>
+                </div>
+                <div class="history__summary"></div>
+                <div class="history__buttons"></div>
             </section>
         </div>
         
