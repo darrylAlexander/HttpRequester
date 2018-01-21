@@ -86,8 +86,25 @@
                 <div class="history__heading">
                     <h1>History</h1>
                 </div>
-                <div class="history__summary"></div>
-                <div class="history__buttons"></div>
+                <div class="history__historysummary">
+                    <table id="historysummary__content" class="historysummary__table">
+                        <tr>
+                            <th>Request</th>
+                            <th>Response</th>
+                            <th>Date</th>
+                            <th>Content Length</th>
+                            <th>Elapsed Time</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="history__buttonsarea">
+                    <button id="buttonsarea__clear" class="buttonsarea__button">Clear History</button>
+                    <button id="buttonsarea__copy" class="buttonsarea__button">Copy to Clipboard</button>
+                    <button id="buttonsarea__delete" class="buttonsarea__button">Delete Request</button>
+                    <button id="buttonsarea__edit" class="buttonsarea__button">Edit Raw Request</button>
+                    <button id="buttonsarea__save" class="buttonsarea__button">Save Request</button>
+                    <button id="buttonsarea__load" class="buttonsarea__button">Load Request</button>
+                </div>
             </section>
         </div>
         
