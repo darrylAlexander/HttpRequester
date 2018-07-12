@@ -1,4 +1,4 @@
-var HTTPREQUESTER = (function () {
+var HTTPRequester = (function () {
 
     function initialise() {
 

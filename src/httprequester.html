@@ -9,23 +9,25 @@
 
     <body>
         <div class="httprequester">
-            <section class="httprequester__request">                
+            <section class="httprequester__request">
                 <div class="request__heading">
                     <h1>Request</h1>
                 </div>
-                <div class="request__basic">
-                    <label for="basic__url">URL:</label>
-                    <input type="url" id="basic__url" class="basic__input" name="url"/>
-                    <select class="basic__select">
-                        <option>POST</option>
-                    </select>
-                    <input type="submit" id="basic__submit--submit" class="basic__submit" value="Submit" />
-                    <input type="submit" id="basic__submit--get" class="basic__submit" value="Get" />
-                    <input type="submit" id="basic__submit--post" class="basic__submit" value="Post" />
-                    <input type="submit" id="basic__submit--put" class="basic__submit" value="Put" />
-                    <input type="submit" id="basic__submit--new" class="basic__submit" value="New Request" />
-                    <input type="submit" id="basic__submit--paste" class="basic__submit" value="Paste Request" />
-                </div>
+                <form id="httprequester_getRequest" action="http://localhost/register.php" method="get">
+                    <div class="request__basic">
+                        <label for="basic__url">URL:</label>
+                        <input type="url" id="basic__url" class="basic__input" name="url"/>
+                        <select class="basic__select">
+                            <option>POST</option>
+                        </select>
+                        <input type="submit" id="basic__submit--submit" class="basic__submit" value="Submit" />
+                        <input type="submit" id="basic__submit--get" class="basic__submit" value="Get" />
+                        <input type="submit" id="basic__submit--post" class="basic__submit" value="Post" />
+                        <input type="submit" id="basic__submit--put" class="basic__submit" value="Put" />
+                        <input type="submit" id="basic__submit--new" class="basic__submit" value="New Request" />
+                        <input type="submit" id="basic__submit--paste" class="basic__submit" value="Paste Request" />
+                    </div>
+                </form>
                 <div class="request__advanced">
                     <div class="advanced__content">
                         <h1>Content to Send</h1>
@@ -64,8 +66,6 @@
                         <button id="parameters__add" class="parameters__button">Add</button>
                     </div>
                 </div>
-                <form id="httprequester_getRequest" action="http://localhost/register.php" method="get">
-                </form>
             </section>
 
             <section class="httprequester__response">
